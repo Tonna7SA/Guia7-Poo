@@ -52,7 +52,9 @@ public class Main {
         System.out.println(p1);
 
     }
-Scanner sc = new Scanner(System.in);
+}
+/*Scanner sc = new Scanner(System.in);
+
         System.out.println("Enter your birthdate:");
         System.out.println("Year: ");
         int year = sc.nextInt();
@@ -112,3 +114,4 @@ if (diferencia != 0) {
         System.out.println(diferencia);
         System.out.println("============================")
 }
+*/

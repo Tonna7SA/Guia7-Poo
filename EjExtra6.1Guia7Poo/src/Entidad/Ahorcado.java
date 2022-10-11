@@ -18,6 +18,7 @@ public class Ahorcado {
     public int jugadasmaximas;
 
     public Ahorcado() {
+        
     }
 
     public Ahorcado(String palabra, String[] vectorasteriscos, String[] vectorpalabra, int letrasencontradas, int jugadasmaximas) {

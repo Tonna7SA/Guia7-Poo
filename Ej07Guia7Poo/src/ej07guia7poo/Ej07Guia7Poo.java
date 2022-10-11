@@ -101,7 +101,9 @@ también calcularemos un porcentaje de cuantos son mayores de edad y cuantos men
         System.out.println("");
         System.out.println("Personas Mayores de edad: " + (d / 4 * 100) + "%");
         System.out.println("Personas Menores de edad: " + (e / 4 * 100) + "%");
+        System.out.println(Personas[0]);
     }
+    
 }
 /* int peso[] = new int[4];
         boolean edad[] = new boolean[4];

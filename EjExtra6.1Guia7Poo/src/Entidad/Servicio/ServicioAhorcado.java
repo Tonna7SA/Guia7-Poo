@@ -3,6 +3,7 @@ package Entidad.Servicio;
 import Entidad.Ahorcado;
 import java.util.Arrays;
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -33,14 +34,17 @@ public class ServicioAhorcado {
     int encontradas = 0;
 
     public Ahorcado CrearJuego() {
-        System.out.println("Ingrese la palabra para adivinar:");
-        d1.setPalabra(leer.next());
-        d1.vectorpalabra = new String[d1.getPalabra().length()];
+        //System.out.println("Ingrese la palabra para adivinar:");
+       // d1.setPalabra(leer.next());
+       d1.setPalabra(JOptionPane.showInputDialog("Ingresa la palabra"));
+       
+       d1.vectorpalabra = new String[d1.getPalabra().length()];
         for (int i = 0; i < d1.getPalabra().length(); i++) {
             d1.vectorpalabra[i] = d1.palabra.substring(i, i + 1);
         }
-        System.out.println("Ingrese la cantidad de jugadas maximas:");
-        d1.setJugadasmaximas(leer.nextInt());
+        //System.out.println("Ingrese la cantidad de jugadas maximas:");
+        //d1.setJugadasmaximas(leer.nextInt());
+        d1.setJugadasmaximas(Integer.parseInt(JOptionPane.showInputDialog("Ingresa la cantidad de jugadas maximas")));
         d1.setLetrasencontradas(0);
         return d1;
     }
@@ -80,7 +84,8 @@ public class ServicioAhorcado {
                 System.out.print(d1.vectorasteriscos[i] + " ");
             }
             System.out.println("");
-            System.out.println("Letra encontradas " + d1.getLetrasencontradas());
+            System.out.println("Letras encontradas " + d1.getLetrasencontradas());
+            System.out.println("Te quedan por encontrar, "+(d1.getPalabra().length()-encontradas)+" letras");
             resp = true;
         }
         if (d1.getLetrasencontradas() == 0) {
