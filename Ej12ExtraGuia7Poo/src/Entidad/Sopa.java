@@ -97,10 +97,10 @@ public class Sopa {
 
     public void BuscarPalabra() {
         System.out.println("Ingrese una palabra a buscar en la sopa de letras");
-        String palabra = leer.next();
-        String busca[] = new String[palabra.length()];
+        palabraencontrar = leer.next();
+        String busca[] = new String[palabraencontrar.length()];
         for (int i = 0; i < busca.length; i++) {
-            busca[i] = palabra.substring(i, i + 1);
+            busca[i] = palabraencontrar.substring(i, i + 1);
         }
         for (int i = 0; i < sopa.length; i++) {
             for (int k = 0; k < busca.length; k++) {
